@@ -15,7 +15,6 @@
           "options": {
             "outputPath": "dist/frontend",
             "index": "src/index.html",
-            "baseHref": "/app/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
