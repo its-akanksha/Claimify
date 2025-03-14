@@ -8,7 +8,8 @@ import { Coupon } from '../components/coupon/coupon.model';
 })
 
 export class CouponService {
-  private baseUrl = 'http://localhost:5000/api/coupons';
+  // private baseUrl = 'http://localhost:5000/api/coupons';
+  private baseUrl = 'https://claimify.onrender.com/api/coupons';
 
   constructor(private http: HttpClient) {}
 
