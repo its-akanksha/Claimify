@@ -56,20 +56,23 @@
 
     <div class="coupon-container animate__animated animate__fadeInUp">
         <div class="wrap">
-            <h2 class="animate__animated animate__pulse animate__infinite animate__slower">🎉 Claim Your Happiness 🎉</h2>
+            <h2 class="animate__animated animate__pulse animate__infinite animate__slower">🎉 Claim Your Happiness 🎉
+            </h2>
 
             <div class="coupon-content">
-                <button 
-                    (click)="claimCoupon()"
-                    [disabled]="countdown > 0 || couponCode" 
-                    [ngClass]="{
-                        'disabled': countdown > 0 || couponCode,
-                        'claimed-button': couponCode
-                    }" 
-                    class="claim-button animate__animated"
-                    [class.animate__tada]="couponCode">
-                    {{ couponCode ? '🎉 Claimed!' : '🎁 Claim Coupon' }}
+                <button (click)="claimCoupon()" [disabled]="countdown > 0 || couponCode || isLoading" [ngClass]="{
+        'disabled': countdown > 0 || couponCode || isLoading,
+        'claimed-button': couponCode
+    }" class="claim-button animate__animated" [class.animate__tada]="couponCode">
+                    <ng-container *ngIf="isLoading; else buttonText">
+                        <span class="spinner"></span>
+                        Loading...
+                    </ng-container>
+                    <ng-template #buttonText>
+                        {{ couponCode ? '🎉 Claimed!' : '🎁 Claim Coupon' }}
+                    </ng-template>
                 </button>
+
 
                 <div class="message-container fade-in-scale" *ngIf="message">
                     <div [ngClass]="{'success': isSuccess, 'error': !isSuccess}" class="message">

@@ -21,12 +21,13 @@ export class CouponComponent implements OnInit, OnDestroy {
   expiresAt: Date | null = null;
   couponCode: string | null = null;
   latestCoupons: Coupon[] = [];
+  isLoading: boolean = false;
 
   constructor(
     @Inject(WINDOW) private window: Window | undefined,
     private couponService: CouponService,
     private confettiService: ConfettiService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.retrieveStoredCoupon();
@@ -69,10 +70,12 @@ export class CouponComponent implements OnInit, OnDestroy {
   }
 
   claimCoupon() {
-    console.log("Button Clicked");
     if (this.countdown > 0) {
       return;
     }
+
+    if (this.isLoading || this.couponCode || this.countdown > 0) return;
+    this.isLoading = true;
 
     this.couponService.getCoupon().subscribe({
       next: (response) => {
@@ -88,6 +91,7 @@ export class CouponComponent implements OnInit, OnDestroy {
         }
         this.confettiService.triggerConfetti();
         this.loadLatestCoupons();
+        this.isLoading = false;
       },
       error: (error) => {
         this.message = error.error.message || 'Failed to claim coupon.';
