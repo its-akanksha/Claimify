@@ -1,206 +1,10 @@
-/* .coupon-container {
-    height: 100vh;
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 28px;
-    background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    transition: box-shadow 0.3s ease;
-    font-family: 'Poppins', 'Segoe UI', sans-serif;
-}
-
-.coupon-container:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-}
-
-h2 {
-    text-align: center;
-    color: #2d3748;
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    letter-spacing: -0.5px;
-}
-
-.coupon-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.claim-button {
-    background-color: #4f46e5;
-    color: white;
-    border: none;
-    padding: 14px 28px;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
-    letter-spacing: 0.3px;
-}
-
-.claimed-button {
-    background-color: #10b981;
-    color: white;
-    border: none;
-    padding: 14px 28px;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: not-allowed;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
-    letter-spacing: 0.3px;
-}
-
-.claim-button:hover:not(.disabled) {
-    background-color: #4338ca;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4);
-}
-
-.claim-button.disabled {
-    background-color: #94a3b8;
-    cursor: not-allowed;
-    box-shadow: none;
-}
-
-.message-container {
-    margin-top: 20px;
-    width: 100%;
-    opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
-}
-
-.message {
-    padding: 16px;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.success {
-    background-color: #ecfdf5;
-    color: #065f46;
-    border: 1px solid #a7f3d0;
-}
-
-.error {
-    background-color: #fef2f2;
-    color: #991b1b;
-    border: 1px solid #fecaca;
-}
-
-.coupon-code {
-    margin: 24px 0;
-    padding: 20px;
-    background-color: #f8fafc;
-    border: 2px dashed #4f46e5;
-    border-radius: 10px;
-    text-align: center;
-    opacity: 0;
-    animation: slideDown 0.6s ease forwards;
-    width: 90%;
-}
-
-.code-label {
-    display: block;
-    margin-bottom: 6px;
-    font-size: 15px;
-    color: #64748b;
-    font-weight: 500;
-}
-
-.code {
-    font-size: 26px;
-    font-weight: 700;
-    color: #4f46e5;
-    letter-spacing: 1px;
-}
-
-.countdown {
-    margin-top: 24px;
-    text-align: center;
-}
-
-.countdown-label {
-    font-size: 15px;
-    color: #64748b;
-    margin-bottom: 6px;
-    font-weight: 500;
-}
-
-.countdown-timer {
-    font-size: 28px;
-    font-weight: 700;
-    color: #e11d48;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@media (max-width: 768px) {
-    .coupon-container {
-        padding: 20px;
-        margin: 16px auto;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    .claim-button,
-    .claimed-button {
-        font-size: 16px;
-        padding: 12px 24px;
-    }
-
-    .code {
-        font-size: 22px;
-    }
-
-    .countdown-timer {
-        font-size: 24px;
-    }
-} */
-
-/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-/* Root variables for theme consistency */
 :root {
     --primary: #be4d99;
     --primary-dark: #80246c;
-    --primary-light: #a5b4fc;
+    --primary-light: #fca5d3;
     --success: #10b981;
     --danger: #ef4444;
     --text-dark: #1e293b;
@@ -211,23 +15,80 @@ h2 {
     --card-border: rgba(255, 255, 255, 0.3);
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    padding: 0.5rem;
+    background-color: #294c7c;
+    color: #D6E6B8;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 0;
+    z-index: 10;
+}
+
 body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    width: 100%;
     background: linear-gradient(135deg, #c084fc, #818cf8, #38bdf8);
+    background-size: 300% 300%;
+    animation: gradientBG 15s ease infinite;
     font-family: 'Poppins', 'Segoe UI', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.page-wrapper {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.background-image {
+    flex: 1;
+    background-image: url('../../../../assets/Claimify.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease;
 }
 
 .coupon-container {
-    height: auto;
-    min-height: 450px;
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 32px;
+    flex: 1;
+    padding: 2rem;
+    margin: 2rem;
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
     border-radius: 20px;
@@ -246,12 +107,18 @@ body {
 .coupon-container::before {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 60%);
-    z-index: -1;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle, rgba(187, 148, 200, 0.815) 0%, rgba(186, 121, 218, 0.509) 70%);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.coupon-container:hover::before {
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 .coupon-container:hover {
@@ -261,12 +128,18 @@ body {
     transform: translateY(-5px);
 }
 
+.wrap {
+    width: 100%;
+    max-width: 480px;
+    padding: 1rem;
+}
+
 h2 {
     text-align: center;
     color: var(--primary-dark);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 24px;
+    margin-bottom: 2rem;
     letter-spacing: -0.5px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     position: relative;
@@ -291,22 +164,26 @@ h2::after {
     width: 100%;
     position: relative;
     z-index: 1;
+    margin-top: 1.5rem;
 }
 
 .claim-button {
     background: linear-gradient(to right, var(--primary), var(--primary-dark));
-    color: white;
+    color: var(--text-light);
     border: none;
-    padding: 16px 32px;
+    padding: 1rem 2rem;
     border-radius: 12px;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.3);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 6px 16px rgba(190, 77, 153, 0.3);
     letter-spacing: 0.5px;
     position: relative;
+    z-index: 1;
     overflow: hidden;
+    width: 100%;
+    max-width: 280px;
 }
 
 .claim-button::before {
@@ -316,218 +193,441 @@ h2::after {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right,
-            rgba(255, 255, 255, 0),
-            rgba(255, 255, 255, 0.3),
-            rgba(255, 255, 255, 0));
-    transition: all 0.6s ease;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+    transition: left 0.8s ease;
+    z-index: -1;
 }
 
 .claim-button:hover::before {
     left: 100%;
 }
 
-.claimed-button {
-    background: linear-gradient(to right, var(--success), #0ca678);
-    color: white;
-    border: none;
-    padding: 16px 32px;
-    border-radius: 12px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: not-allowed;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3);
-    letter-spacing: 0.5px;
+.claim-button:hover:not(.disabled):not(.claimed-button) {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(190, 77, 153, 0.4);
 }
 
-.claim-button:hover:not(.disabled) {
-    background: linear-gradient(to right, #5145e5, #4338ca);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
+.claim-button:active:not(.disabled):not(.claimed-button) {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 4px 8px rgba(190, 77, 153, 0.3);
 }
 
 .claim-button.disabled {
-    background: linear-gradient(to right, #94a3b8, #cbd5e1);
+    background: linear-gradient(to right, #8cb394, #356f56);
     cursor: not-allowed;
+    opacity: 0.7;
     box-shadow: none;
 }
 
+.claimed-button {
+    background: linear-gradient(to right, var(--success), #0c9268);
+    cursor: default;
+}
+
+@keyframes successPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 12px rgba(16, 185, 129, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+}
+
+.claimed-button {
+    animation: successPulse 2s infinite;
+}
+
 .message-container {
-    margin-top: 24px;
+    margin: 1.5rem;
     width: 100%;
+    max-width: 320px;
     opacity: 0;
-    animation: fadeIn 0.6s ease forwards;
+    transform: translateY(10px);
+    animation: fadeInUp 0.6s ease forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .message {
-    padding: 18px;
+    padding: 1rem;
     border-radius: 12px;
     text-align: center;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
 .success {
     background-color: #ecfdf5;
     color: #065f46;
     border: 1px solid #a7f3d0;
+    animation: successBounce 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes successBounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-5px);
+    }
+
+    60% {
+        transform: translateY(-3px);
+    }
 }
 
 .error {
     background-color: #fef2f2;
     color: #991b1b;
     border: 1px solid #fecaca;
+    animation: shake 0.5s cubic-bezier(.36, .07, .19, .97) both;
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-2px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(2px, 0, 0);
+    }
 }
 
 .coupon-code {
-    margin: 28px 0;
-    padding: 24px;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(5px);
-    border: 2px dashed var(--primary);
-    border-radius: 14px;
+    margin-top: 1.5rem;
+    background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+    border-radius: 12px;
+    padding: 1.25rem;
+    width: 100%;
+    max-width: 320px;
     text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    animation: fadeInUp 0.6s ease forwards 0.2s;
     opacity: 0;
-    animation: slideDown 0.7s ease forwards;
-    width: 90%;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-    position: relative;
-    overflow: hidden;
-}
-
-.coupon-code::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, rgba(99, 102, 241, 0) 70%);
-    z-index: -1;
+    transform: translateY(10px);
 }
 
 .code-label {
     display: block;
-    margin-bottom: 8px;
-    font-size: 16px;
     color: var(--text-muted);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
     font-weight: 500;
 }
 
 .code {
-    font-size: 30px;
+    display: block;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-dark);
-    letter-spacing: 2px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    position: relative;
-    display: inline-block;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    border: 1px dashed var(--primary-light);
+    transition: all 0.3s ease;
 }
 
-.code::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(to right, var(--primary-light), var(--primary-dark), var(--primary-light));
-    border-radius: 2px;
+.code:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
 }
 
 .countdown {
-    margin-top: 28px;
+    margin-top: 1.5rem;
+    width: 100%;
+    max-width: 280px;
     text-align: center;
-    padding: 16px;
+    padding: 1.25rem;
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    animation: fadeInUp 0.6s ease forwards 0.4s;
+    opacity: 0;
+    transform: translateY(10px);
 }
 
 .countdown-label {
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--text-muted);
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
     font-weight: 500;
 }
 
 .countdown-timer {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--danger);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    animation: pulsate 1s infinite alternate;
 }
 
-@keyframes fadeIn {
+@keyframes pulsate {
     from {
-        opacity: 0;
-        transform: translateY(10px);
+        transform: scale(1);
     }
 
     to {
-        opacity: 1;
-        transform: translateY(0);
+        transform: scale(1.05);
     }
 }
 
-@keyframes slideDown {
-    from {
-        transform: translateY(-30px);
-        opacity: 0;
+@media (max-width: 1024px) {
+    .page-wrapper {
+        flex-direction: column;
+        min-height: unset;
     }
 
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Confetti animation for claim success */
-.confetti {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #f0f;
-    opacity: 0;
-}
-
-@keyframes confetti-fall {
-    0% {
-        transform: translateY(-100px) rotate(0deg);
-        opacity: 1;
+    .background-image {
+        flex: none;
+        height: 40vh;
+        min-height: 300px;
+        width: 100%;
     }
 
-    100% {
-        transform: translateY(1000px) rotate(720deg);
-        opacity: 0;
+    .coupon-container {
+        flex: none;
+        width: calc(100% - 2rem);
+        margin: 1rem;
+        padding: 1.5rem;
     }
 }
 
 @media (max-width: 768px) {
+    .background-image {
+        height: 35vh;
+        min-height: 250px;
+    }
+
     .coupon-container {
-        padding: 24px;
-        margin: 16px auto;
-        min-height: 400px;
+        width: calc(100% - 1rem);
+        margin: 0.5rem;
+        padding: 1.25rem;
+    }
+
+    .message-container {
+        width: 100%;
+        max-width: 260px;
+        margin-top: 1.5rem;
+    }
+
+    .wrap {
+        padding: 0.5rem;
     }
 
     h2 {
-        font-size: 26px;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 
     .claim-button,
     .claimed-button {
-        font-size: 16px;
-        padding: 14px 28px;
-    }
-
-    .code {
-        font-size: 24px;
+        font-size: 1rem;
+        padding: 0.875rem 1.75rem;
     }
 
     .countdown-timer {
-        font-size: 26px;
+        font-size: 1.75rem;
     }
+
+    .code {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .background-image {
+        height: 30vh;
+        min-height: 200px;
+    }
+
+    .coupon-container {
+        width: 100%;
+        margin: 0;
+        border-radius: 20px 20px 0 0;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .claim-button,
+    .claimed-button {
+        max-width: 240px;
+        font-size: 0.875rem;
+    }
+
+    .message,
+    .coupon-code,
+    .countdown {
+        max-width: 260px;
+    }
+}
+
+@keyframes confetti {
+    0% {
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(100px) rotate(360deg);
+    }
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-light);
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.confetti-animation .confetti {
+    animation: confetti 1s ease-out forwards;
+}
+
+.confetti:nth-child(2n) {
+    background-color: var(--primary);
+}
+
+.confetti:nth-child(3n) {
+    background-color: var(--primary-dark);
+}
+
+.confetti:nth-child(4n) {
+    background-color: var(--success);
+}
+
+.confetti:nth-child(5n) {
+    background-color: var(--danger);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOutScale {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+.fade-in-scale {
+    animation: fadeInScale 0.4s ease forwards;
+}
+
+.fade-out-scale {
+    animation: fadeOutScale 0.4s ease forwards;
+}
+
+.rotate {
+    animation: rotate 2s linear infinite;
+}
+
+.footer {
+    width: 100%;
+    padding: 1rem;
+    background-color: #294c7c;
+    color: #D6E6B8;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer .social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer .social-links a {
+    color: var(--primary-light);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+    color: var(--text-light);
 }

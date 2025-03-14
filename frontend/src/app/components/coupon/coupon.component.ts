@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { WINDOW } from '../../services/window.service';
 import { Coupon } from './coupon.model';
-
+import { ConfettiService } from '../../services/confetti.service';
 @Component({
   selector: 'app-coupon',
   templateUrl: './coupon.component.html',
@@ -24,7 +24,8 @@ export class CouponComponent implements OnInit, OnDestroy {
 
   constructor(
     @Inject(WINDOW) private window: Window | undefined,
-    private couponService: CouponService
+    private couponService: CouponService,
+    private confettiService: ConfettiService
   ) {}
 
   ngOnInit() {
@@ -68,6 +69,7 @@ export class CouponComponent implements OnInit, OnDestroy {
   }
 
   claimCoupon() {
+    console.log("Button Clicked");
     if (this.countdown > 0) {
       return;
     }
@@ -84,7 +86,7 @@ export class CouponComponent implements OnInit, OnDestroy {
           this.window?.localStorage?.setItem('couponExpiresAt', expiryDate.toISOString());
           this.setCooldown(expiryDate);
         }
-
+        this.confettiService.triggerConfetti();
         this.loadLatestCoupons();
       },
       error: (error) => {

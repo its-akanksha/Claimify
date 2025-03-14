@@ -12,6 +12,7 @@ const inMemoryIpMap = new Map();
 let lastAssignedIndex = -1;
 
 const CLAIM_INTERVAL = 60 * 60 * 1000;
+// const CLAIM_INTERVAL =  1000;
 const COOKIE_NAME = 'last_coupon_claim';
 const MAX_COUPONS = 10;
 

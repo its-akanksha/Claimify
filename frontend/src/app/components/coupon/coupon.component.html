@@ -1,36 +1,100 @@
-<div class="coupon-container">
-    <div class="wrap">
-        <h2>Coupon Claim</h2>
+<!-- <header class="header">
+    <h1>CLAIMIFY</h1>
+</header>
 
-        <div class="coupon-content">
-            <button 
-                (click)="claimCoupon()" 
-                [disabled]="countdown > 0 || couponCode" 
-                [ngClass]="{
-                    'disabled': countdown > 0 || couponCode,
-                    'claimed-button': couponCode
+<div class="page-wrapper">
+    <div class="background-image"></div>
+
+    <div class="coupon-container">
+        <div class="wrap">
+            <h2>Claim Your Happiness</h2>
+
+            <div class="coupon-content">
+                <button (click)="claimCoupon()" 
+                    [disabled]="countdown > 0 || couponCode" 
+                    [ngClass]="{
+                        'disabled': countdown > 0 || couponCode,
+                        'claimed-button': couponCode
                     }" 
-                class="claim-button">
-                
-                {{ couponCode ? 'Claimed' : 'Claim Coupon' }}
-            </button>
+                    class="claim-button">
+                    {{ couponCode ? 'Claimed' : 'Claim Coupon' }}
+                </button>
 
-            <div class="message-container" *ngIf="message">
-                <div [ngClass]="{'success': isSuccess, 'error': !isSuccess}" class="message">
-                    {{ message }}
+                <div class="message-container fade-in-scale" *ngIf="message">
+                    <div [ngClass]="{'success': isSuccess, 'error': !isSuccess}" class="message">
+                        {{ message }}
+                    </div>
                 </div>
-            </div>
 
-            <div class="coupon-code" *ngIf="couponCode">
-                <span class="code-label">Your coupon code:</span>
-                <span class="code">{{ couponCode }}</span>
-            </div>
+                <div class="coupon-code fade-in-scale" *ngIf="couponCode">
+                    <span class="code-label">Your coupon code:</span>
+                    <span class="code">{{ couponCode }}</span>
+                </div>
 
-            <div class="countdown" *ngIf="countdown > 0">
-                <span class="code-label" *ngIf="couponCode">{{couponCode}}</span>
-                <div class="countdown-label">Next coupon available in:</div>
-                <div class="countdown-timer">{{ formattedCountdown }}</div>
+                <div class="countdown fade-in-scale" *ngIf="countdown > 0">
+                    <div class="countdown-label">Next coupon available in:</div>
+                    <div class="countdown-timer">{{ formattedCountdown }}</div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<footer class="footer">
+    <p>&copy; 2025 Claimify. All rights reserved.</p>
+    <div class="social-links">
+        <a href="https://github.com/your-github" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
+    </div>
+</footer> -->
+
+<header class="header">
+    <h1>CLAIMIFY</h1>
+</header>
+
+<div class="page-wrapper">
+    <div class="background-image"></div>
+
+    <div class="coupon-container animate__animated animate__fadeInUp">
+        <div class="wrap">
+            <h2 class="animate__animated animate__pulse animate__infinite animate__slower">🎉 Claim Your Happiness 🎉</h2>
+
+            <div class="coupon-content">
+                <button 
+                    (click)="claimCoupon()"
+                    [disabled]="countdown > 0 || couponCode" 
+                    [ngClass]="{
+                        'disabled': countdown > 0 || couponCode,
+                        'claimed-button': couponCode
+                    }" 
+                    class="claim-button animate__animated"
+                    [class.animate__tada]="couponCode">
+                    {{ couponCode ? '🎉 Claimed!' : '🎁 Claim Coupon' }}
+                </button>
+
+                <div class="message-container fade-in-scale" *ngIf="message">
+                    <div [ngClass]="{'success': isSuccess, 'error': !isSuccess}" class="message">
+                        {{ message }}
+                    </div>
+                </div>
+
+                <div class="coupon-code fade-in-scale" *ngIf="couponCode">
+                    <span class="code-label">Your coupon code:</span>
+                    <span class="code">{{ couponCode }}</span>
+                </div>
+
+                <div class="countdown fade-in-scale" *ngIf="countdown > 0">
+                    <div class="countdown-label">Next coupon available in:</div>
+                    <div class="countdown-timer">{{ formattedCountdown }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2025 Claimify. All rights reserved.</p>
+    <div class="social-links">
+        <a href="https://github.com/its-akanksha/" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/akanksha-raj-202404209/" target="_blank">LinkedIn</a>
+    </div>
+</footer>
