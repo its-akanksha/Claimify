@@ -1,8 +1,8 @@
 [build]
   base = "frontend"
   command = "ng build && npm run serve:ssr:frontend"
-  publish = "dist/frontend/browser"
-  functions = "dist/frontend/server"
+  publish = "dist/browser"
+  functions = "dist/server"
 
 [[redirects]]
   from = "/*"
