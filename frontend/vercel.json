@@ -1,17 +1,14 @@
 {
   "builds": [
     {
-      "src": "dist/server/server.mjs",
-      "use": "@vercel/node",
-      "config": {
-        "externalPackages": ["zone.js", "zone.js/node"]
-      }
+      "src": "dist/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/server/server.mjs"
+      "dest": "/index.html"
     }
   ]
 }
