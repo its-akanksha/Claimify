@@ -2,11 +2,11 @@
   base = "frontend"
   command = "ng build && npm run serve:ssr:frontend"
   publish = "dist/browser"
-  functions = "dist/server"
+  functions = "netlify/functions"
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/.netlify/functions/ssr"
   status = 200
 
 [[headers]]

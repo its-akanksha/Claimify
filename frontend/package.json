@@ -6,9 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --configuration=production",
+    "build:ssr": "ng run frontend:server",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:frontend": "node dist/frontend/server/server.mjs",
+    "serve:ssr:frontend": "node dist/frontend/server/main.js",
     "vercel-build": "ng build"
   },
   "private": true,
