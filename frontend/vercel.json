@@ -1,14 +1,14 @@
 {
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/dist/frontend/server/server.mjs"
-      }
-    ],
-    "builds": [
-      {
-        "src": "package.json",
-        "use": "@vercel/node"
-      }
-    ]
-  }
+  "builds": [
+    {
+      "src": "dist/server/server.mjs",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/server/server.mjs"
+    }
+  ]
+}
