@@ -1,0 +1,15 @@
+[build]
+  base = "frontend"
+  command = "ng build && npm run serve:ssr:frontend"
+  publish = "dist/frontend/browser"
+  functions = "dist/frontend/server"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
