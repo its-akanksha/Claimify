@@ -30,6 +30,10 @@
 
 ---
 
+## Architecture Diagram
+
+![Architecture Diagram](architecture.png)
+
 ## **Feature Summary**  
 
 ### 🎟️ **Coupon Distribution Service**  
@@ -104,7 +108,6 @@ MONGO_URI=your_local_mongo_uri
 ```bash
 npm run start
 ```
-
 ---
 
 ### 🌐 **Frontend Setup**  
@@ -119,13 +122,6 @@ npm install
 ```bash
 npm run start:ssr
 ```
-
----
-
-
-
-
----
 
 ---
 
