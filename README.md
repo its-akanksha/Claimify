@@ -109,7 +109,10 @@ MONGO_URI=your_local_mongo_uri
 npm run start
 ```
 ---
+## Backend Architecture Diagram
 
+![Architecture Diagram](backend.png)
+---
 ### 🌐 **Frontend Setup**  
 
 1. **Install Dependencies**  
@@ -123,6 +126,22 @@ npm install
 npm run start:ssr
 ```
 
+## 📁 Project Structure  
+```
+/src
+ ├── app/
+ │   ├── components/   # UI components
+ │   ├── services/     # API and state management
+ │   ├── models/       # Data models
+ │   ├── pages/        # Feature pages
+ │   ├── app.module.ts # Root module
+ ├── assets/           # Static assets
+ ├── environments/     # Configuration files
+```
+---
+## Frontend Architecture Diagram
+
+![Architecture Diagram](frontend.png)
 ---
 
 ## **License**  
